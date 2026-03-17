@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Imaczy Project | Jasa Pembuatan Website & SEO Profesional</title>
+<title>Imaczy Project | Jasa Website & SEO Profesional</title>
 
-<meta name="description" content="Imaczy Project menyediakan jasa pembuatan website profesional dan jasa SEO untuk membantu bisnis Anda tampil di halaman pertama Google.">
+<meta name="description" content="Jasa pembuatan website dan SEO profesional untuk meningkatkan bisnis Anda di Google.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -17,68 +17,86 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#0f172a;
 color:white;
-line-height:1.6;
 }
 
+/* CONTAINER */
 .container{
 width:90%;
 max-width:1200px;
 margin:auto;
 }
 
+/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 0;
-border-bottom:1px solid #020617;
+border-bottom:1px solid #1e293b;
+position:sticky;
+top:0;
+background:#0f172a;
+z-index:1000;
 }
 
-/* LOGO IMAGE */
+/* LOGO */
 .logo img{
-height:120px;
-width:auto;
-display:block;
+height:clamp(60px, 8vw, 100px);
 }
 
+/* NAV */
 nav a{
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
 color:white;
 font-weight:500;
+transition:.3s;
 }
 
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
 .hero{
-padding:100px 0;
+padding:120px 0;
 text-align:center;
 }
 
 .hero h1{
-font-size:48px;
+font-size:clamp(32px,5vw,52px);
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
 opacity:0.8;
+max-width:700px;
+margin:auto;
 }
 
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:14px 30px;
+padding:14px 35px;
 background:#38bdf8;
 color:#000;
-border-radius:30px;
+border-radius:50px;
 font-weight:600;
 text-decoration:none;
+transition:.3s;
 }
 
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SERVICES */
 .services{
 padding:80px 0;
 background:#020617;
@@ -87,13 +105,13 @@ background:#020617;
 .services h2{
 text-align:center;
 margin-bottom:50px;
-font-size:36px;
+font-size:32px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .card{
@@ -101,45 +119,64 @@ background:#0f172a;
 padding:30px;
 border-radius:15px;
 transition:.3s;
+border:1px solid #1e293b;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
+border-color:#38bdf8;
 }
 
 .card h3{
 margin-bottom:10px;
 }
 
+/* ABOUT */
 .why{
 padding:80px 0;
-}
-
-.why h2{
 text-align:center;
-margin-bottom:40px;
 }
 
 .why ul{
-max-width:600px;
-margin:auto;
+margin-top:30px;
+list-style:none;
 }
 
 .why li{
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
+/* CTA */
 .cta{
-padding:80px 0;
+padding:80px 20px;
 text-align:center;
-background:#38bdf8;
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
 color:#000;
 }
 
+.cta h2{
+margin-bottom:15px;
+}
+
+/* FOOTER */
 footer{
 padding:30px;
 text-align:center;
 background:#020617;
+font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.hero{
+padding:80px 0;
+}
+
 }
 
 </style>
@@ -151,9 +188,8 @@ background:#020617;
 
 <header>
 
-<!-- LOGO IMAGE -->
 <div class="logo">
-<img src="logo.png" alt="Imaczy Project Logo">
+<img src="logo.png" alt="Imaczy Project">
 </div>
 
 <nav>
@@ -169,7 +205,7 @@ background:#020617;
 
 <h1>Jasa Pembuatan Website & SEO Profesional</h1>
 
-<p>Membantu bisnis Anda tampil profesional di internet dan muncul di halaman pertama Google.</p>
+<p>Membantu bisnis Anda tampil profesional dan muncul di halaman pertama Google.</p>
 
 <a class="btn" href="#contact">Konsultasi Gratis</a>
 
@@ -177,6 +213,7 @@ background:#020617;
 
 </div>
 
+<!-- SERVICES -->
 <section id="services" class="services">
 
 <div class="container">
@@ -187,22 +224,22 @@ background:#020617;
 
 <div class="card">
 <h3>Pembuatan Website</h3>
-<p>Kami membuat website profesional, cepat, dan responsive untuk berbagai kebutuhan bisnis.</p>
+<p>Website cepat, modern, dan responsive untuk bisnis Anda.</p>
 </div>
 
 <div class="card">
 <h3>Landing Page</h3>
-<p>Landing page yang dirancang untuk meningkatkan konversi penjualan dan marketing.</p>
+<p>Desain fokus konversi untuk meningkatkan penjualan.</p>
 </div>
 
 <div class="card">
-<h3>Jasa SEO</h3>
-<p>Optimasi website agar muncul di halaman pertama Google dengan strategi SEO terbaik.</p>
+<h3>SEO Google</h3>
+<p>Optimasi agar website muncul di halaman pertama Google.</p>
 </div>
 
 <div class="card">
-<h3>Maintenance Website</h3>
-<p>Perawatan website untuk memastikan performa tetap optimal dan aman.</p>
+<h3>Maintenance</h3>
+<p>Perawatan website agar tetap aman dan optimal.</p>
 </div>
 
 </div>
@@ -211,54 +248,41 @@ background:#020617;
 
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="why">
 
 <div class="container">
 
-<h2>Mengapa Memilih Imaczy Project?</h2>
+<h2>Mengapa Memilih Kami?</h2>
 
 <ul>
-<li>✔ Desain website modern dan profesional</li>
-<li>✔ SEO Friendly dan cepat diakses</li>
-<li>✔ Support penuh untuk klien</li>
+<li>✔ Desain modern & profesional</li>
+<li>✔ SEO Friendly</li>
+<li>✔ Fast loading</li>
+<li>✔ Support cepat</li>
 <li>✔ Harga kompetitif</li>
-<li>✔ Pengalaman membuat berbagai jenis website</li>
 </ul>
 
 </div>
 
 </section>
 
+<!-- CTA -->
 <section class="cta">
 
-<h2>Siap Membuat Website Profesional?</h2>
-
-<p>Konsultasikan kebutuhan website dan SEO bisnis Anda sekarang.</p>
+<h2>Siap Punya Website Profesional?</h2>
+<p>Konsultasikan sekarang dan tingkatkan bisnis Anda 🚀</p>
 
 <a class="btn" href="https://wa.me/">Hubungi Kami</a>
 
 </section>
 
+<!-- FOOTER -->
 <footer id="contact">
 
-<p>© 2026 Imaczy Project - Jasa Website & SEO</p>
+<p>© 2026 Imaczy Project - All Rights Reserved</p>
 
 </footer>
-
-<script>
-
-const links = document.querySelectorAll("nav a");
-
-links.forEach(link=>{
-link.addEventListener("click",e=>{
-e.preventDefault();
-document.querySelector(link.getAttribute("href")).scrollIntoView({
-behavior:"smooth"
-});
-});
-});
-
-</script>
 
 </body>
 </html>
